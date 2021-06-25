@@ -5,8 +5,6 @@ import { User } from '../models/user.model';
 @Injectable()
 export class UsersService {
     constructor(
-        // @InjectModel(User)
-        // private readonly userModel: typeof User,
         @Inject('USER_REPOSITORY')
         private  userRepository: typeof  User,
     ) {}
