@@ -19,7 +19,9 @@ async function bootstrap() {
       retryDelay: 5000,
     },
   });
-  // tslint:disable-next-line:no-console
-  await app.listen(() => console.log('Microservice is listening'));
+  await app.listen(
+      // tslint:disable-next-line:no-console
+      () => console.log(`Microservice is listening on port ${process.env.APP_PORT}`),
+  );
 }
 bootstrap();
