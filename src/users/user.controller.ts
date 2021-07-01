@@ -3,9 +3,9 @@ import {EventPattern} from '@nestjs/microservices';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from '../models/user.model';
 import { UsersService } from './user.service';
-import {LocalAuthGuard} from '../authorization/guards/local-auth.guard';
+import {LocalAuthGuard} from '../authorization/passport/local-auth.guard';
 import {LoginUserDto} from './dto/login-user.dto';
-import {JwtAuthGuard} from '../authorization/guards/jwt-auth.guard';
+import {JwtAuthGuard} from '../authorization/passport/jwt-auth.guard';
 import {AuthService} from '../authorization/auth.service';
 
 @Controller('users')
@@ -46,7 +46,7 @@ export class UsersController {
     //     return req.user;
     // }
 
-    @EventPattern('user_create')
+    // @EventPattern('user_create')
     async create(createUserDto: CreateUserDto): Promise<User> {
         console.info('create user', createUserDto);
         return this.usersService.create(createUserDto);

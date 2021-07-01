@@ -1,5 +1,5 @@
 {
-  "name": "nest-microservice-boilerplate",
+  "name": "nest-st-micro-boilerplate",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -28,7 +28,10 @@
     "@nestjs/passport": "^7.1.5",
     "@nestjs/platform-express": "^6.7.2",
     "@nestjs/sequelize": "^0.2.0",
+    "@nestjs/swagger": "^4.8.1",
+    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
+    "nats": "^2.0.8",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
